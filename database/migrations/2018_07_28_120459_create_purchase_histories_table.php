@@ -14,7 +14,7 @@ class CreatePurchaseHistoriesTable extends Migration
     public function up()
     {
         Schema::create('purchase_histories', function (Blueprint $table) {
-            $table->increments('purchase_id');
+            $table->increments('id');
             $table->unsignedInteger('capsule_id');
             $table->unsignedInteger('user_id');
             $table->integer('quantity')->default(1);

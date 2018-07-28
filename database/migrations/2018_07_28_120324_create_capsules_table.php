@@ -14,7 +14,7 @@ class CreateCapsulesTable extends Migration
     public function up()
     {
         Schema::create('capsules', function (Blueprint $table) {
-            $table->increments('capsule_id');
+            $table->increments('id');
             $table->string('name');
             $table->text('description');
             $table->boolean('use_milk');

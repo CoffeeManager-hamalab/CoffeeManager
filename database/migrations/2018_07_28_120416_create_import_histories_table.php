@@ -14,7 +14,7 @@ class CreateImportHistoriesTable extends Migration
     public function up()
     {
         Schema::create('import_histories', function (Blueprint $table) {
-            $table->increments('import_id');
+            $table->increments('id');
             $table->unsignedInteger('capsule_id');
             $table->integer('quantity');
             $table->timestamps();

@@ -14,7 +14,7 @@ class CreateChargeHistoriesTable extends Migration
     public function up()
     {
         Schema::create('charge_histories', function (Blueprint $table) {
-            $table->increments('charge_id');
+            $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->integer('deposit');
             $table->timestamps();
