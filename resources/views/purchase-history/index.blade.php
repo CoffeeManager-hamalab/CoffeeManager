@@ -21,4 +21,11 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+ $(function() {
+     console.log("aaa");
+    $("*").css('color','blue');
+  // jQueryの処理
+});
+</script>
 @endsection
