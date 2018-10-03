@@ -12,7 +12,7 @@ class CapsulesController extends Controller
 {
  public function __construct()
     {
-      //  $this->middleware('auth');
+       $this->middleware('auth');
     }
 
     public function index() {
@@ -23,4 +23,13 @@ class CapsulesController extends Controller
                     ->get();
         return view('purchase-page.index', ['capsule' => $capsule]);
     }
+
+    public function confirm(Request $request,$name){
+	    $capsule =  Capsule::where('name','=',$name)
+		    	->first();
+
+        return view('purchase-page.confirm', ['capsule' => $capsule]);
+    }
+
+
 }

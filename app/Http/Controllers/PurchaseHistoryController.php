@@ -31,4 +31,19 @@ class PurchaseHistoryController extends Controller
                     ->get();
         return view('purchase-history.index', ['history' => $history]);
     }
+
+    public function create() {
+        return view('article.create');
+    }
+
+    public function complete(Request $request){
+	    $addhistory = new PurchaseHistory;
+	   $addhistory->user_id = Auth::user()->id;
+	   $addhistory->capsule_id = $request->id;
+	   $addhistory->quantity = 1;
+	   $addhistory->created_at = date('Y-m-d H:i:s');
+	   $addhistory->updated_at = date('Y-m-d H:i:s');
+           $addhistory->save(); 
+        return view('purchase-history.done');
+    }
 }

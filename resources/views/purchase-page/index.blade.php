@@ -13,7 +13,7 @@
 		     <p class="card-text">{{ $data->price }}円</p>
   		   </div>
 		     <div class="card-footer">
-			<a href="#" class="btn btn-primary" style="width:100%">Buy</a>
+			<a href="/confirm/{{$data->name}}" class="btn btn-primary" style="width:100%">Buy</a>
 		     </div>
 		</div>		
        		@endforeach
