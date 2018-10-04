@@ -15,6 +15,19 @@
                     @endif
 
                     You are logged in!
+
+
+<nav>
+     @can('system-only') {{-- システム管理者権限のみに表示される --}}
+      system
+    @elsecan('admin-higher')　{{-- 管理者権限以上に表示される --}}
+      admin
+    @elsecan('user-higher') {{-- 一般権限以上に表示される --}}
+      user
+    @endcan
+</nav>
+ 
+
                 </div>
             </div>
         </div>

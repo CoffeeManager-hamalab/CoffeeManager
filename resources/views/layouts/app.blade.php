@@ -35,7 +35,55 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+                           
+                
+
+
+         
+
+
+
+<!-- ここに権限ごとのリンクを張っていく -->
+
+
+
+
+
+<nav>
+     @can('system-only') {{-- システム管理者権限のみに表示される --}}
+                            <li class="nav-item">
+                                system-only
+                            </li>
+
+
+    @elsecan('admin-higher')　{{-- 管理者権限以上に表示される --}}
+                            <li class="nav-item">
+                               admin-higher
+                            </li>
+
+    @elsecan('user-higher') {{-- 一般権限以上に表示される --}}
+                             <li class="nav-item">
+                               'user-higher
+                            </li>
+
+    @endcan
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
                     </ul>
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
