@@ -4,21 +4,33 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <table>
-                <tr>
-                    <th>カプセル</th>
-                    <th>個数</th>
-                    <th>金額</th>
-                </tr>
-                @foreach ($history as $data)
-                <tr>
-                    <td>{{ $data->name }}</td>
-                    <td>{{ $data->sum_quantity }}</td>
-                    <td>{{ $data->price * $data->sum_quantity}}</td>
-                </tr>
-                @endforeach
-            </table>
+            @foreach ($histories as $data)
+                <h3>
+                    {{ $data['date'] }}
+                </h3>
+                <table>
+                    <tr>
+                        <th>カプセル</th>
+                        <th>個数</th>
+                        <th>金額</th>
+                    </tr>
+                    @foreach($data['purchase'] as $detail)
+                    <tr>
+                        <td>{{ $detail->name }}</td>
+                        <td>{{ $detail->sum_quantity }}</td>
+                        <td>{{ $detail->price * $detail->sum_quantity}}</td>
+                    </tr>
+                    @endforeach
+                </table>
+            @endforeach
         </div>
     </div>
 </div>
+<script type="text/javascript">
+ $(function() {
+     console.log("aaa");
+    $("*").css('color','blue');
+  // jQueryの処理
+});
+</script>
 @endsection

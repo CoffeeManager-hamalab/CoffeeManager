@@ -25,3 +25,12 @@ DB_PASSWORD=パスワード
 ```
 $ php artisan migrate
 ```
+
+
+## ルート
+
+/login
+
+/register
+
+/purchase-history

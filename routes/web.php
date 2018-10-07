@@ -23,13 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/purchase-history', 'PurchaseHistoryController@index');
 
-
-
-
 /*
 
  Route::group(['middleware' == ['auth', 'can:user-higher']], function () {
-  
+
       Route::get('/home', function () {return 'user';} );
 
     });
@@ -37,14 +34,14 @@ Route::get('/purchase-history', 'PurchaseHistoryController@index');
 
 
      Route::group(['middleware' == ['auth', 'can:admin-higher']], function () {
-      
+
       Route::get('/home', function () {return 'admin';});
     });
 
 
 
      Route::group(['middleware' == ['auth', 'can:system-only']], function () {
-      
+
       Route::get('/home', function () {return 'system';});
     });
   */
@@ -85,3 +82,8 @@ Route::get('/purchase-history', 'PurchaseHistoryController@index');
 
     });
 */
+Route::get('/purchase-page', 'CapsulesController@index');
+
+
+Route::get('/confirm/{name}', 'CapsulesController@confirm');
+Route::post('/confirm', 'PurchaseHistoryController@complete');
