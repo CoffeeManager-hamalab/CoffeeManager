@@ -26,17 +26,6 @@
         </div>
     </div>
 </div>
-
-<header style="background-color:gray">Header</header>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2" style="background-color:red;">Red</div>
-    <div class="col-sm-8" style="background-color:blue;">Blue</div>
-    <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
-  </div>
-</div>
-<footer style="background-color:gray">Footer</footer>
-
 <script type="text/javascript">
  $(function() {
      console.log("aaa");
