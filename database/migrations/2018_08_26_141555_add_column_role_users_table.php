@@ -13,8 +13,8 @@ class AddColumnRoleUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('Maruyama_Aya', function (Blueprint $table) {
-            //
+        Schema::table('users', function (Blueprint $table) {
+          $table->tinyInteger('role')->default(0)->after('password')->index('index_role')->comment('ƒ[ƒ‹');
         });
     }
 
@@ -25,8 +25,8 @@ class AddColumnRoleUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('Maruyama_Aya', function (Blueprint $table) {
-            //
+        Schema::table('users', function (Blueprint $table) {
+          $table->dropColumn('role');
         });
     }
 }
