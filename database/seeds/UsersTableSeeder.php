@@ -36,5 +36,6 @@ class UsersTableSeeder extends Seeder
         $test_user3->remember_token = str_random(10);
 	$test_user3->role=10;
         $test_user3->save();
+
     }
 }
