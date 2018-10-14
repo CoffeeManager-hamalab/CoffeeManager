@@ -23,22 +23,19 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerPolicies();
+         $this->registerPolicies();
 
-        //
-
-// ŠJ”­ŽÒ‚Ì‚Ý‹–‰Â
+  // é–‹ç™ºè€…ã®ã¿è¨±å¯
   Gate::define('system-only', function ($user) {
     return ($user->role == 1);
   });
-  // ŠÇ—ŽÒˆÈãiŠÇ—ŽÒ•ƒVƒXƒeƒ€ŠÇ—ŽÒj‚É‹–‰Â
+  // ç®¡ç†è€…ä»¥ä¸Šï¼ˆç®¡ç†è€…ï¼†ã‚·ã‚¹ãƒ†ãƒ ç®¡ç†è€…ï¼‰ã«è¨±å¯
   Gate::define('admin-higher', function ($user) {
-    return ($user->role > 0 && $user->role <= 5);
+    return ($user->role >0 && $user->role <= 5);
   });
-  // ˆê”Êƒ†[ƒUˆÈãi‚Â‚Ü‚è‘SŒ ŒÀj‚É‹–‰Â
+  // ä¸€èˆ¬ãƒ¦ãƒ¼ã‚¶ä»¥ä¸Šï¼ˆã¤ã¾ã‚Šå…¨æ¨©é™ï¼‰ã«è¨±å¯
   Gate::define('user-higher', function ($user) {
     return ($user->role > 0 && $user->role <= 10);
   });
-
     }
 }
