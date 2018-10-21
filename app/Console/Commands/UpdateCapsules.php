@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use \SplFileObject;
 use Illuminate\Console\Command;
 use App\Capsule;
+use App\Capsule_price;
 
 class UpdateCapsules extends Command
 {
@@ -49,16 +50,23 @@ class UpdateCapsules extends Command
             }
 	}
 	foreach ($records as $capsuleinfo){	
-	    $addcapsule = new Capsule;
+	    $addcapsule = Capsule::firstOrNew(['name' => $capsuleinfo[0]]);
 	    $addcapsule->name = $capsuleinfo[0];
 	    $addcapsule->description = $capsuleinfo[2];
 	    $addcapsule->optimal_scale = $capsuleinfo[4];
 	    $addcapsule->milk_scale = $capsuleinfo[5];
-	    $addcapsule->price = ceil($capsuleinfo[3]/$capsuleinfo[1]);
             $addcapsule->created_at = date('Y-m-d H:i:s');
 	    $addcapsule->updated_at = date('Y-m-d H:i:s');
 	    $addcapsule->img_name = $capsuleinfo[6];
             $addcapsule->save(); 
-        }
+
+            $capsule_id = Capsule::whereIn('name',[$capsuleinfo[0]] )->value('id');
+	    $addprice = new Capsule_price();
+	    $addprice->capsule_id = $capsule_id;
+	    $addprice->price = ceil($capsuleinfo[3]/$capsuleinfo[1]);
+            $addprice->created_at = date('Y-m-d H:i:s');
+	    $addprice->updated_at = date('Y-m-d H:i:s');
+            $addprice->save(); 
+	}
     }
 }

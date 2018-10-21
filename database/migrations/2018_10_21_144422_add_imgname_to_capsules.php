@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnImgnameCapsulesTable extends Migration
+class AddImgnameToCapsules extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddColumnImgnameCapsulesTable extends Migration
      */
     public function up()
     {
-        Schema::table('capsules', function (Blueprint $table) {
-            $table->string('img_name');//
-        });
+       Schema::table('capsules', function (Blueprint $table) {
+          $table->string('img_name');
+        }); //
     }
 
     /**
@@ -26,7 +26,7 @@ class AddColumnImgnameCapsulesTable extends Migration
     public function down()
     {
         Schema::table('capsules', function (Blueprint $table) {
-            $table->dropColumn('img_table');//
-        });
+          $table->dropColumn('img_name');
+        });//
     }
 }
