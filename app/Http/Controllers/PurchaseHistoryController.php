@@ -25,10 +25,11 @@ class PurchaseHistoryController extends Controller
     public function index() {
         $user = Auth::user();
         $history = DB::table('purchase_histories')
-                    ->join('capsules', 'purchase_histories.capsule_id', '=', 'capsules.id')
-                    ->select('capsules.name', 'capsules.price', DB::raw('sum(purchase_histories.quantity) as sum_quantity'), DB::raw('date_format(purchase_histories.created_at, "%Y%m%d") as date'))
+		->join('capsules', 'purchase_histories.capsule_id', '=', 'capsules.id')
+		->join('capsule_prices','purchase_histories.capsule_id','=','capsule_prices.capsule_id')
+                    ->select('capsules.name', 'capsule_prices.price', DB::raw('sum(purchase_histories.quantity) as sum_quantity'), DB::raw('date_format(purchase_histories.created_at, "%Y%m%d") as date'))
                     ->where('purchase_histories.user_id', '=', $user->id)
-                    ->groupBy('capsules.id', DB::raw('date_format(purchase_histories.created_at, "%Y%m%d")'))
+                    ->groupBy('capsules.id','capsule_prices.price', DB::raw('date_format(purchase_histories.created_at, "%Y%m%d")'))
                     ->latest('date')
                     ->get();
 

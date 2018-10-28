@@ -7,9 +7,9 @@
        	    <div class="card-columns">	
 	      @foreach ($capsule as $data)
     		<div class="card">
-   		 <img class="card-img-top" src="{{asset('images/')}}/{{ $data->name}}.jpg" alt="Card image cap" style="width:15em ">
+   		 <img class="card-img-top" src="{{asset('images/')}}/{{ $data->img_name}}" alt="Card image cap" style="width:15em ">
    		   <div class="card-body">
-   		    <h4 class="card-title">{{ $data->name}}</h4>
+   		    <h4 class="card-title">{{ $data->name }}</h4>
 		     <p class="card-text">{{ $data->price }}円</p>
   		   </div>
 		     <div class="card-footer">
