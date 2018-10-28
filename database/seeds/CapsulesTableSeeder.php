@@ -11,24 +11,28 @@ class CapsulesTableSeeder extends Seeder
             'description' => 'これはカフェオレです',
             'optimal_scale' => 6,
             'milk_scale' => 0,
+            'price' => 55
         ],
         [
             'name' => 'カプチーノ',
             'description' => 'これはカプチーノです。\nミルクを使用します。',
             'optimal_scale' => 5,
             'milk_scale' => 1,
+            'price' => 110
         ],
         [
             'name' => 'レギュラーブレンド',
             'description' => 'これはレギュラーブレンドです。',
             'optimal_scale' => 7,
             'milk_scale' => 0,
+            'price' => 55
         ],
         [
             'name' => '宇治抹茶',
             'description' => 'これは宇治抹茶です。',
             'optimal_scale' => 5,
             'milk_scale' => 0,
+            'price' => 55
         ]
     ];
 
@@ -44,6 +48,7 @@ class CapsulesTableSeeder extends Seeder
             $capsule->name = $data['name'];
             $capsule->description = $data['description'];
             $capsule->optimal_scale = $data['optimal_scale'];
+            $capsule->price = $data['price'];
 	    $capsule->milk_scale = $data['milk_scale'];
 	    $capsule->img_name = 'hogehoge.png';
             $capsule->save();
