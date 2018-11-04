@@ -18,60 +18,70 @@ class PurchaseHistoriesTableSeeder extends Seeder
                 'capsule_id' => 1,
                 'user_id' => 1,
                 'quantity' => 1,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 2,
                 'user_id' => 1,
                 'quantity' => 1,
+                'price' => 100,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 1,
                 'user_id' => 1,
                 'quantity' => 1,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 1,
                 'user_id' => 2,
                 'quantity' => 1,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 2,
                 'user_id' => 2,
                 'quantity' => 1,
+                'price' => 100,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 3,
                 'user_id' => 2,
                 'quantity' => 1,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 4,
                 'user_id' => 2,
                 'quantity' => 3,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 1)
             ],
             [
                 'capsule_id' => 1,
                 'user_id' => 2,
                 'quantity' => 2,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 3)
             ],
             [
                 'capsule_id' => 2,
                 'user_id' => 2,
                 'quantity' => 1,
+                'price' => 100,
                 'date' => Carbon::createFromDate(2018, 8, 3)
             ],
             [
                 'capsule_id' => 1,
                 'user_id' => 2,
                 'quantity' => 1,
+                'price' => 50,
                 'date' => Carbon::createFromDate(2018, 8, 4)
             ]
         ];
@@ -81,6 +91,7 @@ class PurchaseHistoriesTableSeeder extends Seeder
             $history->capsule_id = $data['capsule_id'];
             $history->user_id = $data['user_id'];
             $history->quantity = $data['quantity'];
+            $history->price = $data['price'];
             $history->created_at = $data['date'];
             $history->updated_at = $data['date'];
             $history->save();
