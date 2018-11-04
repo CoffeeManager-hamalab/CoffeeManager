@@ -5,7 +5,7 @@
 　
     <div class="alert alert-primary" role="alert">
      <h4> {{ $capsule->name }},{{ $capsule->price }}円</h4>
-	<a href="/home" class="btn btn-primary">キャンセル</a>
+	<a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-primary">キャンセル</a>
 　　　<form method="post" action="/confirm">
 	 {{ csrf_field() }}
 	 <input type="hidden" class="form-control" name="id" value="{{ $capsule->id }}">
