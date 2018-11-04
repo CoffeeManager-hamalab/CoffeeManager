@@ -18,7 +18,7 @@ class CapsulesController extends Controller
     public function index() {
        /// $user = Auth::user();
         $capsule = DB::table('capsules')
-                    ->select('capsules.name', 'capsules.price')
+                    ->select('capsules.name', 'capsules.price','capsules.img_name')
                     ->groupBy('capsules.id')
                     ->get();
         return view('purchase-page.index', ['capsule' => $capsule]);

@@ -56,7 +56,6 @@ class UpdateCapsules extends Command
 	    $addcapsule->optimal_scale = $capsuleinfo[4];
 	    $addcapsule->milk_scale = $capsuleinfo[5];
 	    $addcapsule->price = ceil($capsuleinfo[3]/$capsuleinfo[1]);
-            $addcapsule->created_at = date('Y-m-d H:i:s');
 	    $addcapsule->updated_at = date('Y-m-d H:i:s');
 	    $addcapsule->img_name = $capsuleinfo[6];
             $addcapsule->save(); 

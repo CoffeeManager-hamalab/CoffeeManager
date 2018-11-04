@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <script src="{{asset('/assets/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{asset('/assets/js/bootstrap.min.js')}}"></script>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -37,59 +35,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
-                           
-                
-
-
-         
-
-
-
-<!-- ここに権限ごとのリンクを張っていく -->
-
-
-
-
-
-<nav>
-     @can('system-only') {{-- システム管理者権限のみに表示される --}}
-                            <li class="nav-item">
-                                system-only
-                            </li>
-
-
-    @elsecan('admin-higher')　{{-- 管理者権限以上に表示される --}}
-                            <li class="nav-item">
-                               admin-higher
-                            </li>
-
-    @elsecan('user-higher') {{-- 一般権限以上に表示される --}}
-                             <li class="nav-item">
-                               'user-higher
-                            </li>
-
-    @endcan
-
-
-
-</nav>
-
-
-
-
-
-
-
-
-
-
                     </ul>
 
 
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a class="nav-link" href="/purchase-history"> {{ __('purchase-history') }}</a>
+                        <a class="nav-link" href="/purchase-page">{{ __('purchase-page') }}</a>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -100,6 +53,7 @@
                             </li>
                         @else
                             <li class="nav-item dropdown">
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
