@@ -30,6 +30,7 @@ class PurchaseHistoryController extends Controller
                     ->where('purchase_histories.user_id', '=', $user->id)
                     ->groupBy('capsules.id', DB::raw('date_format(purchase_histories.created_at, "%Y%m%d")'))
                     ->latest('date')
+                    ->orderBy('capsules.id', 'ASC')
                     ->get();
 
         $group_date = new Carbon(Carbon::now());
