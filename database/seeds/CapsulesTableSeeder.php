@@ -48,8 +48,9 @@ class CapsulesTableSeeder extends Seeder
             $capsule->name = $data['name'];
             $capsule->description = $data['description'];
             $capsule->optimal_scale = $data['optimal_scale'];
-            $capsule->milk_scale = $data['milk_scale'];
             $capsule->price = $data['price'];
+	    $capsule->milk_scale = $data['milk_scale'];
+	    $capsule->img_name = 'hogehoge.png';
             $capsule->save();
         }
     }

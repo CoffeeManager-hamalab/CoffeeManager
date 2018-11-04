@@ -12,9 +12,7 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CapsulesController@index');
 
 Auth::routes();
 
@@ -83,6 +81,9 @@ Route::get('/purchase-history', 'PurchaseHistoryController@index');
     });
 */
 Route::get('/purchase-page', 'CapsulesController@index');
+
+route::get('/import-history', 'ImportHistoryController@index');
+route::post('/import-history/create', 'ImportHistoryController@store');
 
 
 Route::get('/confirm/{name}', 'CapsulesController@confirm');
