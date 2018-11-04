@@ -61,6 +61,7 @@ class PurchaseHistoryController extends Controller
 	   $addhistory->user_id = Auth::user()->id;
 	   $addhistory->capsule_id = $request->id;
 	   $addhistory->quantity = 1;
+	   $addhistory->price = $request->price;
 	   $addhistory->created_at = date('Y-m-d H:i:s');
 	   $addhistory->updated_at = date('Y-m-d H:i:s');
            $addhistory->save(); 
