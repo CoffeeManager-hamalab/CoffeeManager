@@ -55,27 +55,27 @@ Route::get('/purchase-history', 'PurchaseHistoryController@index');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/purchase-history', 'PurchaseHistoryController@index');
 
-    // ‘Sƒ†[ƒU
+    // å…¨ãƒ¦ãƒ¼ã‚¶
     Route::group(['middleware' => ['auth', 'can:user-higher']], function () {
-      // ƒ†[ƒUˆê——
+      // ãƒ¦ãƒ¼ã‚¶ä¸€è¦§
       Route::get('/account', 'AccountController@index')->name('account.index');
     });
 
-    // ŠÇ—ŽÒˆÈã
+    // ç®¡ç†è€…ä»¥ä¸Š
     Route::group(['middleware' => ['auth', 'can:admin-higher']], function () {
-      // ƒ†[ƒU“o˜^
+      // ãƒ¦ãƒ¼ã‚¶ç™»éŒ²
       Route::get('/account/regist', 'AccountController@regist')->name('account.regist');
       Route::post('/account/regist', 'AccountController@createData')->name('account.regist');
 
-      // ƒ†[ƒU•ÒW
+      // ãƒ¦ãƒ¼ã‚¶ç·¨é›†
       Route::get('/account/edit/{user_id}', 'AccountController@edit')->name('account.edit');
       Route::post('/account/edit/{user_id}', 'AccountController@updateData')->name('account.edit');
 
-      // ƒ†[ƒUíœ
+      // ãƒ¦ãƒ¼ã‚¶å‰Šé™¤
       Route::post('/account/delete/{user_id}', 'AccountController@deleteData');
     });
 
-    // ƒVƒXƒeƒ€ŠÇ—ŽÒ‚Ì‚Ý
+    // ã‚·ã‚¹ãƒ†ãƒ ç®¡ç†è€…ã®ã¿
     Route::group(['middleware' => ['auth', 'can:system-only']], function () {
 
     });
