@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{ $detail->name }}</td>
                         <td>{{ $detail->sum_quantity }}</td>
-                        <td>{{ $detail->price * $detail->sum_quantity}}</td>
+                        <td>{{ $detail->price}}</td>
                     </tr>
                     @endforeach
                 </table>
