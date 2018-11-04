@@ -15,7 +15,7 @@
                         <th>個数</th>
                         <th>金額</th>
                     </tr>
-                    
+
                     @foreach($data['purchase'] as $detail)
                     <tr>
                         <td>{{ $detail->name }}</td>
@@ -29,11 +29,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
- $(function() {
-     console.log("aaa");
-    $("*").css('color','blue');
-  // jQueryの処理
-});
-</script>
 @endsection
