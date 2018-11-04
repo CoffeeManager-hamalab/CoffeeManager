@@ -14,7 +14,7 @@ class AddPriceColumnHistory extends Migration
     public function up()
     {
         Schema::table('purchase_histories', function (Blueprint $table) {
-            $table->string('price');
+            $table->unsignedInteger('price');
         });//
     }
 
