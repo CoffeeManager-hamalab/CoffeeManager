@@ -33,7 +33,7 @@ class PurchaseHistoryController extends Controller
                     ->orderBy('capsules.id', 'ASC')
                     ->get();
 
-        $group_date = new Carbon(Carbon::now());
+        $group_date = new Carbon(Carbon::maxValue());
         $ret = [];
         $tmp = [];
         foreach ($history as $data) {
