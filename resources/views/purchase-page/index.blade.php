@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="stylesheet" href="flickity.css">
-<script src="flickity.pkgd.min.js"></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
