@@ -6,6 +6,9 @@
 
 <div class="container">
     <div class="row justify-content-center">
+        <div>
+            支払予定額：{{ $bill }}
+        </div>
         <div class="col-md-8">
             @foreach ($histories as $data)
                 <h3 class="text-danger">
