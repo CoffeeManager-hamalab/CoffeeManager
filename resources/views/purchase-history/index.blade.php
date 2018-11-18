@@ -1,24 +1,26 @@
 @extends('layouts.app')
-
 @section('content')
 
-<body style="background-color:#F5D0A9">
+
+<link href="{{ asset('css/history.css') }}" rel="stylesheet">
+
+<body>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             @foreach ($histories as $data)
-                <h3 class="text-danger">
+                <h3 class="Date">
                     {{ $data['date'] }}
                 </h3>
-                <table class="table table-striped table table-bordered">
-                    <tr style="background-color:brown">
+                <table class="table table table-bordered Element">
+                    <tr class="Title">
                         <th>カプセル</th>
                         <th>個数</th>
                         <th>金額</th>
                     </tr>
                     @foreach($data['purchase'] as $detail)
-                    <tr style="background-color:#DF7401">
+                    <tr>
                         <td>{{ $detail->name }}</td>
                         <td>{{ $detail->sum_quantity }}</td>
                         <td>{{ $detail->price * $detail->sum_quantity}}</td>
@@ -31,8 +33,16 @@
 </div>
 
 </body>
+
 <script type="text/javascript">
+
+
+
+
  $(function() {
+
+  $('.Date').css('color','blue');
+
      console.log("aaa");
     $("*").css('color','blue');
   // jQueryの処理
