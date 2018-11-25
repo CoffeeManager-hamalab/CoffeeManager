@@ -24,6 +24,8 @@ class PurchaseHistoryController extends Controller
 
     public function index() {
         $user = Auth::user();
+
+        // 日付・カプセルごとに集計
         $history = DB::table('purchase_histories')
                     ->join('capsules', 'purchase_histories.capsule_id', '=', 'capsules.id')
                     ->select('capsules.name', DB::raw('sum(purchase_histories.quantity * purchase_histories.price) as price'), DB::raw('sum(purchase_histories.quantity) as sum_quantity'), DB::raw('date_format(purchase_histories.created_at, "%Y%m%d") as date'))
@@ -36,6 +38,8 @@ class PurchaseHistoryController extends Controller
         $group_date = new Carbon(Carbon::maxValue());
         $ret = [];
         $tmp = [];
+
+        // 日付ごとに配列を分割
         foreach ($history as $data) {
             $carbon_date = new Carbon($data->date);
             if (!$group_date->isSameDay($carbon_date)) {
@@ -49,6 +53,8 @@ class PurchaseHistoryController extends Controller
             $tmp['purchase'][] = $data;
         }
         $ret[] = $tmp;
+
+        // $retには$tmpの初期となる空行が入るのでarray_shiftで除外
         array_shift($ret);
         return view('purchase-history.index', ['histories' => $ret]);
     }
