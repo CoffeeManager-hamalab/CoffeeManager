@@ -88,3 +88,13 @@ route::post('/import-history/create', 'ImportHistoryController@store');
 
 Route::get('/confirm/{name}', 'CapsulesController@confirm');
 Route::post('/confirm', 'PurchaseHistoryController@complete');
+
+Route::get('/charge', 'ChargeController@index');
+route::post('/charge/store', 'ChargeController@store');
+
+Route::group(['prefix' => 'ajax'], function() {
+
+    Route::resource('chargeController', 'Ajax\ChargeController', [
+    ]);
+
+});
