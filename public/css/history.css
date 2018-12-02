@@ -1,5 +1,5 @@
 body{background-color:#F5D0A9;}
-.Title th{background-color:brown;color: azure}
+.Title th{background-color:brown;color:rgb(255, 251, 0)}
 .Element{color: rgb(255, 255, 255)}
 .Element tr:nth-child(2n+1){background-color:rgba(218, 149, 23, 0.897)}
 .Element tr:nth-child(2n){background-color:rgba(255, 176, 4, 0.514)}
