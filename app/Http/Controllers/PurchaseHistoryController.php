@@ -56,7 +56,20 @@ class PurchaseHistoryController extends Controller
 
         // $retには$tmpの初期となる空行が入るのでarray_shiftで除外
         array_shift($ret);
-        return view('purchase-history.index', ['histories' => $ret]);
+
+
+        // 請求額の計算
+        $charge = DB::table('charge_histories')
+                    ->where('user_id', '=', $user->id)
+                    ->sum('deposit');
+
+        $bill = DB::table('purchase_histories')
+                    ->where('user_id', '=', $user->id)
+                    ->sum(DB::raw('quantity * price'));
+
+        $bill_amount = $bill - $charge;
+
+        return view('purchase-history.index', ['histories' => $ret, 'bill' => $bill_amount]);
     }
 
     public function create() {
@@ -71,7 +84,7 @@ class PurchaseHistoryController extends Controller
 	   $addhistory->price = $request->price;
 	   $addhistory->created_at = date('Y-m-d H:i:s');
 	   $addhistory->updated_at = date('Y-m-d H:i:s');
-           $addhistory->save(); 
+           $addhistory->save();
         return view('purchase-history.done');
     }
 }
