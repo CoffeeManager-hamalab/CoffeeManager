@@ -11,7 +11,7 @@
                     <select class="form-control" id="id" name="id">
                         @foreach($users as $user)
                         <tr>
-                            <option value={{ $user->id }}> {{  $user->name }} </option>
+                            <option value={{ $user['id'] }}> {{  $user['name'] }} </option>
                         </tr>
                         @endforeach
                     </select>
@@ -22,41 +22,48 @@
             <hr>
         </div>
         <div class="col-md-8">
-            <h1>履歴</h1>
-            <select class="form-control" id="history" name="id">
-                @foreach($users as $user)
-                <tr>
-                    <option value={{ $user->id }}> {{  $user->name }} </option>
-                </tr>
-                @endforeach
-            </select>
-            <div id="history-list">
+            <div id="history">
+                <h1>履歴</h1>
+                <select class="form-control" v-model="selected" @change="getHistory">
+                    <option v-for="user in users" v-bind:value="user.id">
+                        @{{ user.name }}
+                    </option>
+                </select>
+                <div id="history-list">
+                    @{{ selected }}
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-$(function(){
-    $('#history').change(function(){
-        var value = $(this).val();
+Vue.prototype.$http = axios;
+var app = new Vue({
+    el: '#history',
+    data: {
+        selected: '',
+        users: @json($users)
+    },
+    methods: {
+        getHistory: function () {
+            this.$http.post('/ajax/chargeController/' + this.selected)
+            .then(function(response){
 
-        var request = $.ajax({
-            type: 'GET',
-            url: '/ajax/chargeController/' + value,
-            timeout: 3000
-        });
+                // 成功したとき
+                console.log("success");
 
-        request.done(function(data){
-            console.log(data);
-        });
+            }).catch(function(error){
 
-        request.fail(function(){
-            console.log("error");
-        })
-    });
+                // 失敗したとき
+                console.log("falied");
+
+            });
+        }
+    }
 });
-
 </script>
 
 @endsection

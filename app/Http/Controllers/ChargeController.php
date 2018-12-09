@@ -12,8 +12,7 @@ class ChargeController extends Controller
     //
     public function index()
     {
-        $users = User::all();
-
+        $users = User::all()->toArray();
         return view('charge.index', ['users' => $users]);
     }
 
