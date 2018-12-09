@@ -1,0 +1,455 @@
+[33mcommit 1ef9743aef7c151502fca2bad06c4a2b08d79032[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 11 22:32:26 2018 +0900
+
+    コメント追加
+
+[33mcommit cb7d8ea55e132665275180a90b0b64ed75f0ca48[m
+Merge: c23399e a37ec07
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 11 22:26:04 2018 +0900
+
+    Merge remote-tracking branch 'origin/Role' into develop
+    
+    # Conflicts:
+    #       resources/views/purchase-history/index.blade.php
+
+[33mcommit c23399e21d7366bcbe0b1e0c6bcf392efcbd2292[m
+Merge: 4c69427 c23a46c
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 11 21:35:48 2018 +0900
+
+    Merge remote-tracking branch 'origin/layout' into develop
+    
+    # Conflicts:
+    #       resources/views/purchase-history/index.blade.php
+
+[33mcommit c23a46cb8e3f1248c52a516f8c321907de6a19f8[m
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Sun Nov 11 21:17:15 2018 +0900
+
+    プラグイン実装修正版
+
+[33mcommit 4c69427377b93d020b01cd87a4d312e7c5dc8e8f[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 11 21:17:04 2018 +0900
+
+    変数の変更
+
+[33mcommit a37ec07c04bfceb928d5b15b871265ef28b4277f[m
+Merge: c57a5ad 9e5b99e
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Mon Nov 5 00:43:05 2018 +0900
+
+    Merge branch 'Role' of https://github.com/CoffeeManager-hamalab/CoffeeManager into Role
+
+[33mcommit c57a5adbfb5c65c2663141d308655c4ada0b0a91[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Mon Nov 5 00:42:56 2018 +0900
+
+    色の変更
+
+[33mcommit 570285d29ce3acf8f36b0c4023342ef529d6b309[m
+Merge: 4834d1d 2535d23
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Nov 5 00:26:49 2018 +0900
+
+    Merge remote-tracking branch 'origin/layout' into develop
+
+[33mcommit 4834d1d8e2789d1a18358e98621d4bc8243ccceb[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Nov 5 00:23:19 2018 +0900
+
+    キャンセル時に前の画面に戻る様に変更
+
+[33mcommit 2535d23dcb8d4eebc6e95f3c3944c9309aeae1c8[m
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Mon Nov 5 00:18:57 2018 +0900
+
+    プラグインの実験
+
+[33mcommit 53c91d9d9d319647b4d34b8c283e668906fa436b[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Nov 5 00:17:54 2018 +0900
+
+    謎のスクリプトを削除
+
+[33mcommit fc5368fdd80595102c9d836f71cc8774552432aa[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Nov 5 00:14:43 2018 +0900
+
+    当日購入した分が表示されない不具合を修正
+
+[33mcommit 533b85a584d35e519cef5747ad7ac113fd837c58[m
+Merge: 70f840c 7113e32
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 23:52:03 2018 +0900
+
+    Merge branch 'develop' of https://github.com/CoffeeManager-hamalab/CoffeeManager into develop
+
+[33mcommit 70f840c98a6575f5a19afb004d3d434f8bed4e95[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 23:51:25 2018 +0900
+
+    capsules.idで並び替え
+    
+    purchase_historyの履歴一覧が更新のたびに順番が切り替わるのを防ぐため
+
+[33mcommit b7596dcce602e43bbb69d458c8b5b3145007b8e4[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 23:48:56 2018 +0900
+
+    @endsectionの追加 文言とpathの変更
+    
+    /homeの削除に伴い
+
+[33mcommit 7113e32f23af18d9d30774867efef5c0ce6e9508[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Nov 4 23:46:18 2018 +0900
+
+    購入履歴若干見やすくしました
+
+[33mcommit 2f4f20d464fad7c634526e279e1d1bd3afa53907[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 23:10:58 2018 +0900
+
+    UTF8に変換
+
+[33mcommit a6a4b401d3359782e57af76027873caaab696df1[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 22:44:15 2018 +0900
+
+    購入額の算出方法変更に伴って表示内容を変更
+
+[33mcommit 9e5b99ed917e404559a0ee259173b93b7deca7b1[m
+Merge: 45350b7 dd72bfc
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 22:24:47 2018 +0900
+
+    Merge remote-tracking branch 'origin/Role' into develop
+
+[33mcommit dd72bfc026e96952a3c4fbb8d100428459e7376c[m
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Sun Nov 4 22:22:09 2018 +0900
+
+    ログアウトボタンの復活とページ移動ボタンの追加
+
+[33mcommit 45350b72647c428150b550aa001e93974cb3067c[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 22:13:51 2018 +0900
+
+    ルートページを購入画面に変更
+
+[33mcommit f0310fd9516b657e66416934b68ab0fe582a3dd6[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Nov 4 22:04:56 2018 +0900
+
+    purchase-historiesテーブルのseederにpriceを追加
+    
+    priceカラムの追加に伴い
+
+[33mcommit d9e47ab9fdb405f787caab8fff09dcf5ec0e8bf9[m[33m ([m[1;31morigin/database_correction[m[33m, [m[1;32mdatabase_correction[m[33m)[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Sun Nov 4 21:56:35 2018 +0900
+
+    correct migration
+    
+    change column type price of purchase_histories string to intager
+
+[33mcommit 0e9a5f0c85fc974b18a47c304ecd74b0f6f82352[m[33m ([m[1;32morigin[m[33m)[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Sun Nov 4 21:39:14 2018 +0900
+
+    add price column to purchase_histories table
+
+[33mcommit 353e417a8f33d1ca7a45800df8c3ee069e7c8ed2[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Nov 4 21:29:35 2018 +0900
+
+    データベース登録時のroleのデフォルト値を10にした
+
+[33mcommit d0faa69ff83da6b7f78a89bbf8e16283916d1931[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Oct 29 00:37:24 2018 +0900
+
+    endsectionがなかったので修正
+
+[33mcommit 5309afd54031726fe247c27b857e000dbe1c236a[m
+Merge: 70627ca 071661d
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Oct 29 00:25:26 2018 +0900
+
+    Merge commit '071661d703281a985774de90ae580e304eb5fcd8' into develop
+
+[33mcommit 70627ca55f4f8f561092ce682e3a8e1eef5fbc4b[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Oct 29 00:24:08 2018 +0900
+
+    Capsulesテーブルのpriceカラムを再度追加
+    
+    購入価格をpurchase_historiesテーブルで保持するため
+
+[33mcommit e4024cc3ee37924dd6a46becfd5610b5e1db721a[m
+Merge: 408a3dd dcc9c6e
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 28 21:28:18 2018 +0900
+
+    Merge branch 'import-history' into develop
+
+[33mcommit 408a3ddd465202889b69faafc77b2fcd372b88b4[m
+Merge: 46096b5 2319250
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 28 21:27:42 2018 +0900
+
+    Merge branch 'command_line_app' into develop
+
+[33mcommit 2319250a413620fc7612c63d174bee73d827f3e5[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Mon Oct 22 00:47:06 2018 +0900
+
+    console application update
+    
+    To execute command, capsules table is updated and capsule_prices tables is added
+
+[33mcommit f4a3e0bdf550e7bc6b29c4938ad7f958cb8e8734[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Mon Oct 22 00:06:46 2018 +0900
+
+    Slack通知機能の追加
+
+[33mcommit dcc9c6ea76b02f0fad1f4b45956e7753cd2e90db[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 21 23:44:01 2018 +0900
+
+    在庫画面を追加
+    
+    在庫の追加履歴と在庫登録が可能
+
+[33mcommit 74dff4ef7d9d55e73e91dbbc143292445dea2393[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Sun Oct 14 23:47:42 2018 +0900
+
+    create command to add capsules data
+    
+    to execute by "php artisan command:create-capsules"
+
+[33mcommit 071661d703281a985774de90ae580e304eb5fcd8[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Oct 14 23:16:43 2018 +0900
+
+    シードの修正と権限の確かめの表示
+    
+    （権限回りほぼ完成）
+
+[33mcommit 3a8bcbc3ca7c617adf9b215df4044234de138f57[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Tue Oct 9 17:18:53 2018 +0900
+
+    Add img_name column in capsule table
+    
+    create new migration file to add new column
+
+[33mcommit 4c4598461404821a164957370cab1f6f0bd97317[m
+Merge: c76af2b cac843a
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Oct 7 22:26:26 2018 +0900
+
+    Merge branch 'Role' of https://github.com/CoffeeManager-hamalab/CoffeeManager into Role
+
+[33mcommit c76af2b82d376e957e0ec26666844f45e771b073[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Oct 7 22:16:10 2018 +0900
+
+    seedの変更
+    
+    User3の追加
+
+[33mcommit b200dd84b16498928478d384bdb1892ca21cec4f[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Oct 7 22:13:48 2018 +0900
+
+    seedの追加
+    
+    User3を追加
+
+[33mcommit cac843a1537e78b29d54f8545ac3b2c1b3e39b6a[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 7 22:06:14 2018 +0900
+
+    DBカラム追加時にコメントを付与しないように変更
+
+[33mcommit 4f4d095b7746f0cb2dd44ede1ff60c32830a546a[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Sun Oct 7 21:55:53 2018 +0900
+
+    マイグレーションファイルの追加
+    
+    roleの追加
+
+[33mcommit 1e6541fd0249a8c1de2c993a3e104ffac150b76a[m
+Merge: eaa53a7 46096b5
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 7 21:26:48 2018 +0900
+
+    Merge branch 'develop' into Role
+    
+    # Conflicts:
+    #       routes/web.php
+
+[33mcommit 46096b57c732173ffeda5eeb7d9d04e72f686352[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 7 21:17:46 2018 +0900
+
+    リファクタリング
+    
+    テストコード削除
+
+[33mcommit c5151b9c81f4cea4847fe999616a1eb787a589ff[m
+Merge: 877ad2d 623938e
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 7 21:09:39 2018 +0900
+
+    Merge remote-tracking branch 'origin/purchase_page' into develop
+
+[33mcommit 877ad2d8872451f475c88d479ba3a3724ae4688e[m
+Merge: cb64512 6e43dd4
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Oct 7 21:09:22 2018 +0900
+
+    Merge remote-tracking branch 'origin/layout' into develop
+
+[33mcommit eaa53a730979b7e50dbf72335644106e8bc1161a[m
+Author: DESKTOP-3PTTUJL\髙木亜蘭 <mourimotonariararagikoyomidatemasamune2943@outlook.jp>
+Date:   Thu Oct 4 17:46:43 2018 +0900
+
+    Roleのコミット
+
+[33mcommit 623938e748523a29c5cc5de319a6d722b56363d7[m[33m ([m[1;31morigin/purchase_page[m[33m, [m[1;32mpurchase_page[m[33m)[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Wed Oct 3 13:42:19 2018 +0900
+
+    purchase module complete
+
+[33mcommit 6e43dd4f6c0b55490fa94d950dc79b58c0125e32[m
+Merge: 6ac8a71 8014b06
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Mon Aug 27 00:06:36 2018 +0900
+
+    Merge branch 'develop' of https://github.com/CoffeeManager-hamalab/CoffeeManager into layout
+
+[33mcommit 32aa72e8a114eb8ab64384866f436c7590ff601f[m
+Author: hachi2nd <mamoru.hatanaka@gmail.com>
+Date:   Mon Aug 27 00:05:59 2018 +0900
+
+    make purchase page
+
+[33mcommit cb64512f1aec4455cd314336219d42a11df5bcd0[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Mon Aug 27 00:05:58 2018 +0900
+
+    日付ごとに購入履歴を出力するように変更
+
+[33mcommit 6ac8a7184b62c3b44f650e0452138c40e52c1279[m
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Sun Aug 26 21:40:55 2018 +0900
+
+    bootstrapの初歩
+
+[33mcommit 02a6718a0fa544d4f296fd34b85eb166db23335e[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 26 21:07:12 2018 +0900
+
+    購入履歴の日付を編集
+
+[33mcommit a87467a9f91073759b3726ad8bf7c4cd5b013d0b[m
+Author: hawkde <akasatana309week@gmail.com>
+Date:   Mon Aug 20 13:24:10 2018 +0900
+
+    jqueryとbootstrapの実装
+    bootstrapは今後試していく予定
+
+[33mcommit 8014b06e80a9cb249518d899600cd3fb40fbd92e[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 19 22:18:29 2018 +0900
+
+    Update README.md
+
+[33mcommit 81a998259601d4ff45f5cd989d817f76039981c4[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 19 21:22:09 2018 +0900
+
+    ログインリダイレクトの実装
+
+[33mcommit 7a503fdb96eadbbade6cf5ff6728305e01281322[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 5 23:58:01 2018 +0900
+
+    カプセルの消費個数表示ページを追加
+
+[33mcommit a28c2c13396f4925273d4fca5a801ffb06de1dfe[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 5 22:23:09 2018 +0900
+
+    テストユーザと購入履歴のシーダを作成
+
+[33mcommit d54af942c4f71a9bf84654bda4a5870700f97191[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 5 22:08:11 2018 +0900
+
+    リファクタリング
+    クォーテーションの変更
+
+[33mcommit 55a90a0d59b36a76caee2f2822cd5655c9328806[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 5 21:57:27 2018 +0900
+
+    カプセルのシーダを作成
+
+[33mcommit db9eb0c8d71122dfabc078c8fe07d77cb1d2aa77[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sun Aug 5 21:42:07 2018 +0900
+
+    カプセルのミルク可否をミルクの目盛量に変更
+
+[33mcommit cf22da50c5b13f2fefcdf6bc7bd2a4a192a29342[m
+Merge: c1f22cc a5f66a9
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 22:28:41 2018 +0900
+
+    Merge branch 'develop' of https://github.com/zonozono32/CoffeeManager into develop
+
+[33mcommit c1f22cc5863830268ff83f427528f75f571f15d2[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 22:28:17 2018 +0900
+
+    Auth機能の追加
+
+[33mcommit 3dfed3a1993df327d8b41c9ee04a1834c26a8d30[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 22:27:57 2018 +0900
+
+    idカラムの修正
+
+[33mcommit a5f66a9bf8312a169d1cb2fe31d30174a85e2220[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 21:33:09 2018 +0900
+
+    Create README.md
+
+[33mcommit 2eae47cdce89c1ed3887255f955469fa14a42bf1[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 21:28:31 2018 +0900
+
+    各テーブルのマイグレーションファイルの作成
+
+[33mcommit 513e3802fa0beb687a2782f0245632cedf454ced[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 28 21:28:08 2018 +0900
+
+    composer update
+
+[33mcommit 4cdbf5ae4c43aa8098f9b612d0e55574e200abbb[m
+Author: zonozono32 <zonocat32@gmail.com>
+Date:   Sat Jul 7 23:41:50 2018 +0900
+
+    initialize commit
