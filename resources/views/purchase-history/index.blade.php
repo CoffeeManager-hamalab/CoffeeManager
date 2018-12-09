@@ -37,18 +37,4 @@
 
 </body>
 
-<script type="text/javascript">
-
-
-
-
- $(function() {
-
-  $('.Date').css('color','blue');
-
-     console.log("aaa");
-    $("*").css('color','blue');
-  // jQueryの処理
-});
-</script>
 @endsection
