@@ -5,13 +5,15 @@
     @foreach ($capsule as $data)
     <div class="carousel-cell" style="width: 20rem">
         <div class="card">
-            <img class="card-img-top" src="{{asset('images/')}}/{{ $data->name}}.jpg" alt="Card image cap" style="width:15em ">
             <div class="card-body">
+                <img class="card-img-top" src="{{asset('images/')}}/{{ $data->img_name}}" alt="Card image cap" style="width:10em " align="left">
                 <h4 class="card-title">{{ $data->name}}</h4>
-                <p class="card-text">{{ $data->price }}円</p>
-            </div>
-            <div class="card-footer">
-                <a href="/confirm/{{$data->name}}" class="btn btn-primary" style="width:10em">Buy</a>
+                <div>
+                    <p class="card-text">
+                        {{ $data->price }}円<br>
+                    </p>
+                    <a href="/confirm/{{$data->name}}" class="btn btn-primary" style="width:7em" buttom="0" position="absolute">Buy</a>
+                </div>
             </div>
         </div>
     </div>
